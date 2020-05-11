@@ -1,0 +1,108 @@
+---
+title: "Exercices du Jour"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(shiny)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Les exercices du jour portent sur la création de vecteurs, de matrices et de data frame. 
+
+# 
+
+1) Créer un vecteur x, contenant ces valeurs: 1,2,4,3,5. Puis, afficher les données du vecteur
+```{r exo1, exercise=TRUE, exercise.eval=TRUE}
+
+
+```
+
+```{r exo1-hint}
+x<-c(1,2,4,3,5)
+print(x)
+```
+
+
+
+2) Créer un vecteur y dont les valeurs vont de 35 à 100. Puis, afficher les données du vecteur.
+```{r exo2, exercise=TRUE, exercise.eval=TRUE}
+
+
+```
+
+```{r exo2-hint}
+x<-35:100
+print(x)    # pour afficher les données du vecteur x
+```
+
+
+3) Créer un vecteur z qui contient que des nombre pairs allant de 24 à 80
+```{r exo3, exercise=TRUE, exercise.eval=TRUE}
+
+
+```
+
+```{r exo3-hint}
+z<-seq(from=24,to=80,by=2)
+print(z)          # pour afficher les données du vecteur z
+```
+
+
+4) Créer un vecteur u dont les valeurs vont de 30 à 15
+```{r exo4, exercise=TRUE, exercise.eval=TRUE}
+
+
+```
+
+```{r exo4-hint}
+u<-30:15
+print(u)
+```
+
+5) Créer un vecteur v dont les valeurs sont séquentielles, allant de 25 à 1, comme suit: 25,22,19 etc. 
+```{r exo5, exercise=TRUE, exercise.eval=TRUE}
+
+
+```
+
+```{r exo5-hint}
+v<-seq(from=25,to=1,by=-3)
+print(v)
+```
+
+
+6) Les vecteurs *al* et *AL* contiennent les 5 premières lettres de l'alphabet, respectivement en minuscule et en majuscule. Le vecteur *note* indique la plus petite note qui correspond à une lettre.
+  a) Afficher les valeurs de ces deux vecteurs;
+  b) Créer une matrice *M* avec les 3 vecteurs;
+  c) Afficher les valeurs de la matrice *M*;
+  d) Créer un data frame *D* avec les 3 vecteurs;
+  e) Afficher les valeurs du data frame *D*.
+  
+```{r exo6, exercise=TRUE, exercise.eval=TRUE}
+al<-letters[1:5]
+AL<-LETTERS[1:5]
+note<-seq(90,to=50,by=-10)
+
+
+
+
+
+```
+
+
+```{r exo6-hint}
+print(al)    # pour afficher les valeurs du vecteur al
+print(AL)    # pour afficher les valeurs du vecteur AL
+print(note)  # pour afficher les valeurs du vecteur note
+
+M<-cbind(al,AL,note)
+M           # afficher la matrice M
+D<-data.frame(al,AL,note)
+D           # afficher le data frame
+```
+
+
+

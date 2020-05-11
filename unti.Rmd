@@ -1,0 +1,19 @@
+---
+title: "Untitled"
+author: "Raulin L. Cadet, Claudel Mombeuil and Bénédique Paul"
+date: "09/05/2020"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
