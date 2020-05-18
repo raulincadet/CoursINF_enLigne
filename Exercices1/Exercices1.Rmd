@@ -1,8 +1,9 @@
 ---
-title: "Exercices du Jour"
+title: "Exercices R"
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
+
 
 ```{r setup, include=FALSE}
 library(learnr)
@@ -10,9 +11,11 @@ library(shiny)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Les exercices du jour portent sur la création de vecteurs, de matrices et de data frame. 
+## Création d'objets
 
-# 
+Les six exercices qui suivent portent sur la création de vecteurs, de matrices et de data frame. 
+
+
 
 1) Créer un vecteur x, contenant ces valeurs: 1,2,4,3,5. Puis, afficher les données du vecteur
 ```{r exo1, exercise=TRUE, exercise.eval=TRUE}
@@ -82,13 +85,9 @@ print(v)
   e) Afficher les valeurs du data frame *D*.
   
 ```{r exo6, exercise=TRUE, exercise.eval=TRUE}
-al<-letters[1:5]
+al<-letters[1:5]   # creation d'un vecteur
 AL<-LETTERS[1:5]
 note<-seq(90,to=50,by=-10)
-
-
-
-
 
 ```
 
@@ -105,4 +104,99 @@ D           # afficher le data frame
 ```
 
 
+## Indexation en R
 
+1) Donner les noms qui suivent aux éléments du vecteur *jo*: Asefi, Mèsidye, Kòkòt, Debonè, Timafi. Puis, afficher les éléments du vecteur *jo*.
+
+```{r exo_b1, exercise=TRUE, exercise.eval=TRUE}
+jo<-10:5 # creation d'un vecteur
+
+```
+
+```{r exo_b1-hint}
+names(jo)<-c('Asefi','Mèsidye','Kòkòt','Debonè','Timafi')
+print(jo)
+```
+
+2) La ligne de code ci-dessous crée une matrice du nom de *Mat*, avec les éléments d'un vecteur allant de 15 à 35.
+  a) Afficher la matrice;
+  b) Donner ces noms aux colonnes de la matrice, pour indiquer les variables: Score A, Score B, Score C;
+  c) Donner ces noms créoles aux lignes de la matrice, pour indiquer les individus: Asefi, Mèsidye, Kòkòt, Debonè, Timafi, Dyesèl, Timafoun;
+  d) Afficher de nouveau la matrice, pour vérifier les changements.
+
+```{r exo_b2, exercise=TRUE, exercise.eval=TRUE}
+Mat<-matrix(15:35,ncol=3) # creation d'un vecteur
+
+```
+
+```{r exo_b2-hint}
+print(Mat)
+colnames(Mat)<-c('Score A','Score B','Score C')
+rownames(Mat)<-c('Asefi','Mèsidye','Kòkòt','Debonè','Timafi','Dyesèl','Timafoun')
+print(Mat)
+```
+
+
+3) Afficher les éléments du vecteur *jo*. Puis, extraire la valeur se trouvant en 5ème position.
+
+```{r exo_b3, exercise=TRUE, exercise.eval=TRUE}
+jo<-10:5 # creation d'un vecteur
+names(jo)<-c('Asefi','Mèsidye','Kòkòt','Debonè','Timafi')
+
+```
+
+```{r exo_b3-hint}
+jo[5]         # une premiere facon de faire
+jo['Timafi']  # une deuxieme facon de faire
+```
+
+4) Afficher les éléments se trouvant en 2ème et 5ème position.
+
+```{r exo_b4a, exercise=TRUE, exercise.eval=TRUE}
+jo<-10:5 # creation d'un vecteur
+names(jo)<-c('Asefi','Mèsidye','Kòkòt','Debonè','Timafi')
+
+```
+
+```{r exo_b4a-hint}
+jo[c(2,5)]         # une premiere facon de faire
+jo[c('Mèsidye','Timafi')]  # une deuxieme facon de faire
+```
+
+
+5) Ajouter une ligne de code, pour afficher la donnée de la troisième ligne de la matrice *Mat*. Puis, afficher les données des lignes 1 et 3
+
+```{r exo_b4, exercise=TRUE, exercise.eval=TRUE}
+Mat<-matrix(15:35,ncol=3) # creation d'un vecteur
+colnames(Mat)<-c('Score A','Score B','Score C') # noms des colonnes
+rownames(Mat)<-c('Asefi','Mèsidye','Kòkòt','Debonè','Timafi',
+                 'Dyesèl','Timafoun')     # noms des lignes
+
+
+
+```
+
+```{r exo_b4-hint}
+Mat[3,]       # une premiere facon de faire
+Mat['Kòkòt',] # Une autre facon de faire
+
+```
+
+
+6) Ajouter une ligne de code, pour afficher les données des lignes 1 et 3 de la matrice *Mat*.
+
+```{r exo_b5, exercise=TRUE, exercise.eval=TRUE}
+Mat<-matrix(15:35,ncol=3) # creation d'un vecteur
+colnames(Mat)<-c('Score A','Score B','Score C') # noms des colonnes
+rownames(Mat)<-c('Asefi','Mèsidye','Kòkòt','Debonè','Timafi',
+                 'Dyesèl','Timafoun')     # noms des lignes
+
+
+
+```
+
+```{r exo_b5-hint}
+Mat[c(3,5),]       # une premiere facon de faire
+Mat[c('Kòkòt','Timafi'),] # Une autre facon de faire
+
+```
