@@ -5,9 +5,9 @@ account: cage
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2279538
-bundleId: 3153399
+bundleId: 3170323
 url: https://cage.shinyapps.io/Exercices1/
-when: 1589577024.43725
+when: 1589978891.13649
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: Exercices1.md

@@ -200,3 +200,31 @@ Mat[c(3,5),]       # une premiere facon de faire
 Mat[c('Kòkòt','Timafi'),] # Une autre facon de faire
 
 ```
+
+
+## Exercice sans correction
+
+1) Créer un vecteur contenant 20 valeurs numériques, avec la fonction sample (cliquer sur *Hint* pour voir comment faire). Puis:
+a) Calculer la moyenne du vecteur;
+b) Calculer l'écart-type du vecteur;
+c) Réaliser un graphique en nuage de points avec les éléments du vecteur x;
+d) Extraire les valeurs du vecteur qui sont supérieures à la moyenne;
+e) Calculer la somme des valeurs qui sont inférieures à la moyenne.
+
+```{r exo_c1, exercise=TRUE, exercise.eval=TRUE}
+
+
+
+```
+
+```{r exo_c1-hint}
+x<-sample(20)
+```
+
+```{r rep_c1,echo=FALSE,include=FALSE}
+x<-sample(20)
+mean(x)
+sd(x)
+x[x>mean(x)]
+```
+
